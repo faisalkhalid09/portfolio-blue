@@ -1,0 +1,6 @@
+# Production requirements for the modern portfolio website (GBP 1500)
+# FastAPI-based server for Railway deployment
+
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6

@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  portfolio:
+    build: .
+    container_name: rantilini-portfolio-modern
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+    labels:
+      - "com.docker.compose.service=rantilini-portfolio"
+    networks:
+      - portfolio-network
+
+networks:
+  portfolio-network:
+    driver: bridge
